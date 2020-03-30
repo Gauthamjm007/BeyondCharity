@@ -8,6 +8,6 @@ NGOs can conduct events so that people can come and volunteer for free for the t
 NGOs can raise funds for only social cause,like an ambulance for a hospital or renovating an a school etc.<br/>
 People can contribute to the things they believe in and they can raise awareness for the issues
 
-![Home](img/1_Home.jpg)
+![Home](UI_UX/1_Home.jpg)
  
 
