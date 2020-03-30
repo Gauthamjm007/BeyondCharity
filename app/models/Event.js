@@ -11,6 +11,8 @@ const GeoSchema = new Schema({
     index: "2dsphere"
   }
 });
+
+
 const eventSchema = new Schema([
   {
     owner: {

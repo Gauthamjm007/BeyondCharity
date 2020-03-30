@@ -1,7 +1,7 @@
 **Beyond Charity**
 
 
-Wireframe is designed using Figma , to view that click [here](https://www.figma.com/file/NsU6v7uJOqk4Ol3wYdZadn/BeyondCharity?node-id=0%3A1) to view that
+Wireframe is designed using Figma , to view that click [here](https://www.figma.com/file/NsU6v7uJOqk4Ol3wYdZadn/BeyondCharity?node-id=0%3A1) 
 
 An application similar to the MeetUp but for only conducting events for social cause,fundraising and raising awareness<br/>
 NGOs can conduct events so that people can come and volunteer for free for the things they believe in<br/>
