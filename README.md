@@ -1,6 +1,6 @@
 **Beyond Charity**
 
-
+Wireframe images - https://drive.google.com/open?id=1IpRbHshyolT04O1zzt7ixgk2XZ8Op2FB
 Wireframe is designed using Figma , to view that click [here](https://www.figma.com/file/NsU6v7uJOqk4Ol3wYdZadn/BeyondCharity?node-id=0%3A1) 
 
 An application similar to the MeetUp but for only conducting events for social cause,fundraising and raising awareness<br/>
