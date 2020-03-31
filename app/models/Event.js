@@ -12,7 +12,6 @@ const GeoSchema = new Schema({
   }
 });
 
-
 const eventSchema = new Schema([
   {
     owner: {
@@ -27,12 +26,13 @@ const eventSchema = new Schema([
     event_date: {
       type: Date
     },
+    event_time: {
+      type: "String"
+    },
     geometry: GeoSchema,
-    event_imgs: [
-      {
-        type: String
-      }
-    ],
+    event_imgs: {
+      type: String
+    },
     desciption: {
       type: String
     },

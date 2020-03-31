@@ -1,4 +1,5 @@
 const Group = require("../models/Group");
+let imgPort = "http://localhost:4000";
 
 module.exports.list = (req, res) => {
   Group.find({ owner: req.user._id })
@@ -19,10 +20,10 @@ module.exports.create = (req, res) => {
     address: body.address,
     geometry: body.geometry,
     description: body.description,
-    group_photos: body.group_photos,
+    group_photos: imgPort + "/uploads/" + req.file.filename,
     web: body.web,
     org_phone: body.org_phone,
-    org_email: body.org_phone,
+    org_email: body.org_email,
     events: body.events
   });
 
@@ -39,30 +40,42 @@ module.exports.create = (req, res) => {
 module.exports.update = (req, res) => {
   const body = req.body;
   const id = req.params.id;
-  if (req.user.role == "admin") {
-    Group.findByIdAndUpdate(id, body, { new: true, runValidators: true })
-      .then((user) => {
-        res.json(user);
-      })
-      .catch((err) => {
-        res.json(err);
-      });
-  } else {
-    res.send("you are not authorized to edit the category");
-  }
+
+  Group.findByIdAndUpdate(id, body, { new: true, runValidators: true })
+    .then((user) => {
+      res.json(user);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+};
+
+module.exports.updateImg = (req, res) => {
+  const id = req.params.id;
+
+  Group.findByIdAndUpdate(
+    id,
+    { group_photos: imgPort + "/uploads/" + req.file.filenam },
+    { new: true, runValidators: true }
+  )
+    .then((user) => {
+      res.json(user);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
 };
 
 module.exports.destroy = (req, res) => {
   const id = req.params.id;
-  if (req.user.role == "admin") {
-    Group.findByIdAndDelete(id)
-      .then((user) => {
-        res.json(user);
-      })
-      .catch((err) => {
-        res.josn(err);
-      });
-  } else {
-    res.send("you are not authorized to delete a category");
-  }
+
+  Group.findByIdAndDelete(id)
+    .then((user) => {
+      res.json(user);
+    })
+    .catch((err) => {
+      res.josn(err);
+    });
 };
+
+//5e823d8169e440478c397a2d

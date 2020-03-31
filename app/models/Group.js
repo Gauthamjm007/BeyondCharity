@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const validator = require("validator");
+
 
 const GeoSchema = new Schema({
   type: {
@@ -30,11 +32,9 @@ const groupSchema = new Schema([
     description: {
       type: String
     },
-    group_photos: [
-      {
-        type: String
-      }
-    ],
+    group_photos: {
+      type: String
+    },
     web: {
       type: String,
       validate: {
