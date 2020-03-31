@@ -1,0 +1,31 @@
+.register-form-email {
+  position: absolute;
+  width: 280px;
+  height: 76px;
+  left: 895px;
+  top: 217px;
+}
+
+.register-form-password {
+  position: absolute;
+  width: 280px;
+  height: 76px;
+  left: 895px;
+  top: 224px;
+}
+
+.register-form-c-password {
+  position: absolute;
+  width: 280px;
+  height: 76px;
+  left: 895px;
+  top: 224px;
+}
+
+.register-form-button {
+  position: absolute;
+  width: 97px;
+  height: 36px;
+  left: 986px;
+  top: 484px;
+}

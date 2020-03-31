@@ -1,0 +1,44 @@
+.follow {
+  width: 90px;
+  height: 16px;
+  padding-left: 10px;
+  left: 15px;
+  top: 757px;
+
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 16px;
+  /* identical to box height, or 145% */
+
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+
+  color: #05386b;
+}
+
+.copyright {
+  left: 10px;
+  padding-left: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 130px;
+  top: 651px;
+
+  background: #5cdb95;
+}
+
+.icon-grid {
+  padding-left: 10px;
+}

@@ -1,0 +1,23 @@
+.login-form-email {
+  position: absolute;
+  width: 280px;
+  height: 76px;
+  left: 895px;
+  top: 217px;
+}
+
+.login-form-password {
+  position: absolute;
+  width: 280px;
+  height: 76px;
+  left: 895px;
+  top: 224px;
+}
+
+.login-form-button {
+  position: absolute;
+  width: 97px;
+  height: 36px;
+  left: 986px;
+  top: 444px;
+}

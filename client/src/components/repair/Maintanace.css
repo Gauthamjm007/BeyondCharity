@@ -1,0 +1,49 @@
+.dolphin {
+  position: absolute;
+  width: 216px;
+  height: 289px;
+  left: 129px;
+  top: 131px;
+}
+
+.maintanace {
+  position: absolute;
+  left: 21.88%;
+  right: 34.61%;
+  top: 25.75%;
+  bottom: 66.49%;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 71px;
+  /* identical to box height */
+
+  letter-spacing: -1.5px;
+
+  color: #05386b;
+
+  mix-blend-mode: normal;
+}
+
+.fixing {
+  position: absolute;
+  left: 13.98%;
+  right: 18.98%;
+  top: 48.1%;
+  bottom: 47.41%;
+
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 88px;
+  /* identical to box height */
+
+  letter-spacing: -1.5px;
+
+  color: #646464;
+
+  mix-blend-mode: normal;
+}
