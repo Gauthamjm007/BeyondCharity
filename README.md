@@ -10,4 +10,8 @@ People can contribute to the things they believe in and they can raise awareness
 
 ![wireframe](Wireframe/byc_wireframe.gif)
  
+packages used
+react-redux
+redux
+redux-thunk
 
