@@ -1,13 +1,12 @@
 import React from "react";
 import Footer from "./components/footer/Footer";
-import GroupChoice from "./components/group/GroupChoice";
 import BycLogo from "./components/icons/bycLogo";
-
+import GroupCreate from "./components/group/GroupCreate";
 function App() {
   return (
     <div>
       <BycLogo />
-      <GroupChoice />
+      <GroupCreate />
       <Footer></Footer>
     </div>
   );

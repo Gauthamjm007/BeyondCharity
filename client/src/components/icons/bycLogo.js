@@ -5,7 +5,7 @@ import Logo from "./iconbc.svg";
 export default function BycLogo() {
   return (
     <div>
-      <Grid container spacing={1}>
+      <Grid container>
         <Grid container item xs={12} spacing={3} justify="flex-end">
           <ReactSVG src={Logo} />
         </Grid>
