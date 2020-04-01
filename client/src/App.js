@@ -1,12 +1,12 @@
 import React from "react";
 import Footer from "./components/footer/Footer";
-import MainAppBar from "./components/appbar/appbar";
 import GroupChoice from "./components/group/GroupChoice";
+import BycLogo from "./components/icons/bycLogo";
 
 function App() {
   return (
     <div>
-      <MainAppBar />
+      <BycLogo />
       <GroupChoice />
       <Footer></Footer>
     </div>
