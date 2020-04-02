@@ -104,7 +104,6 @@ export default function EventCreateForm() {
                         name="time"
                         label="To"
                         variant="outlined"
-                     
                         InputProps={{
                           endAdornment: (
                             <InputAdornment position="end">
@@ -113,7 +112,7 @@ export default function EventCreateForm() {
                           )
                         }}
                       />
-                    </Grid>{" "}
+                    </Grid>
                   </Grid>
                   <Grid item xs={12}>
                     <Grid container justify="center" spacing={1}>
@@ -121,7 +120,7 @@ export default function EventCreateForm() {
                         component={DatePicker}
                         name="date"
                         label="Date"
-                        style={{ width: "400px" }}  
+                        style={{ width: "400px" }}
                         variant="outlined"
                         InputProps={{
                           endAdornment: (

@@ -114,3 +114,7 @@ class MarkMap extends Component {
 export default GoogleApiWrapper({
   apiKey: GOOGLE_KEY
 })(MarkMap);
+
+// const getData = (lat, lng, address) => {
+//   console.log(lat, lng, address, "values");
+// };    {/* <MarkMap sendData={getData} /> */}
