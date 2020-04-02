@@ -9,13 +9,13 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import { createMuiTheme } from "@material-ui/core/styles";
-import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
+import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import InputAdornment from "@material-ui/core/InputAdornment";
-import DomainOutlinedIcon from "@material-ui/icons/DomainOutlined";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import TitleIcon from "@material-ui/icons/Title";
+import MarkMap from "../map/MarkMap";
 import PhoneIcon from "@material-ui/icons/Phone";
-import WebIcon from "@material-ui/icons/Web";
+import PermContactCalendarIcon from "@material-ui/icons/PermContactCalendar";
 import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 const ChoiceTitle = styled.h3`
   font-family: Oswald;
@@ -47,7 +47,7 @@ export default function EventCreateForm() {
       <Grid container>
         <Grid item xs={12}>
           <Grid container justify="center" spacing={1}>
-            <ChoiceTitle>Create Group</ChoiceTitle>
+            <ChoiceTitle>Create Event</ChoiceTitle>
           </Grid>
         </Grid>
       </Grid>
@@ -68,53 +68,65 @@ export default function EventCreateForm() {
           {({ submitForm, isSubmitting, interest }) => (
             <Form>
               <Grid container spacing={3} justify="center">
-                <Grid item xs="auto">
-                  <Field
-                    component={TextField}
-                    name="name"
-                    type="text"
-                    label="Group Name"
-                    variant="outlined"
-                    InputProps={{
-                      endAdornment: (
-                        <InputAdornment position="end">
-                          <DomainOutlinedIcon color="primary" />
-                        </InputAdornment>
-                      )
-                    }}
-                  />{" "}
+                <Grid item xs={12}>
+                  <Grid container justify="center" spacing={1}>
+                    <Field
+                      component={TextField}
+                      name="name"
+                      type="text"
+                      label="Group Name"
+                      variant="outlined"
+                      style={{ width: "400px" }}
+                      InputLabelProps={{
+                        variant: "outlined"
+                      }}
+                      InputProps={{
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <TitleIcon color="primary" />
+                          </InputAdornment>
+                        )
+                      }}
+                    />
+                  </Grid>
                 </Grid>
-                <Grid item xs="auto">
-                  <Field
-                    component={TextField}
-                    type="email"
-                    label="Email"
-                    name="email"
-                    variant="outlined"
-                    InputProps={{
-                      endAdornment: (
-                        <InputAdornment position="end">
-                          <MailOutlineIcon color="primary" />
-                        </InputAdornment>
-                      )
-                    }}
-                  />
+                <Grid item xs={12}>
+                  <Grid container justify="center" spacing={1}>
+                    <Field
+                      component={TextField}
+                      type="text"
+                      label="Contact Person Name"
+                      name="name"
+                      style={{ width: "400px" }}
+                      variant="outlined"
+                      InputProps={{
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <PermContactCalendarIcon color="primary" />
+                          </InputAdornment>
+                        )
+                      }}
+                    />
+                  </Grid>
                 </Grid>
-                <Grid item xs="auto">
-                  <Field
-                    component={TextField}
-                    type="text"
-                    label="Phone"
-                    name="phone"
-                    variant="outlined"
-                    InputProps={{
-                      endAdornment: (
-                        <InputAdornment position="end">
-                          <PhoneIcon color="primary" />
-                        </InputAdornment>
-                      )
-                    }}
-                  />
+                <Grid item xs={12}>
+                  <Grid container justify="center" spacing={1}>
+                    <Field
+                      component={TextField}
+                      type="text"
+                      style={{ width: "400px" }}
+                      label="Contact person phone"
+                      name="phone"
+                      variant="outlined"
+                      InputProps={{
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <PhoneIcon color="primary" />
+                          </InputAdornment>
+                        )
+                      }}
+                    />
+                  </Grid>
                 </Grid>
                 <Grid item xs={12}>
                   <Grid container justify="center" spacing={1}>
@@ -123,6 +135,7 @@ export default function EventCreateForm() {
                       type="text"
                       label="Get current Location"
                       name="phone"
+                      style={{ width: "400px" }}
                       variant="outlined"
                       InputProps={{
                         endAdornment: (
@@ -134,6 +147,24 @@ export default function EventCreateForm() {
                     />
                   </Grid>
                 </Grid>
+                <Grid item xs={12}>
+                  <Grid
+                    container
+                    direction="row"
+                    justify="center"
+                    alignItems="center"
+                  >
+                    <div
+                      style={{
+                        width: "300px",
+                        height: "300px",
+                        marginRight: "200px"
+                      }}
+                    >
+                      <MarkMap />
+                    </div>
+                  </Grid>
+                </Grid>
 
                 {isSubmitting && <LinearProgress />}
                 <Grid item xs={12}>
@@ -141,12 +172,12 @@ export default function EventCreateForm() {
                     <Field
                       component={TextField}
                       type="text"
-                      label="Address"
+                      label="Venue"
+                      style={{ width: "400px" }}
                       name="address"
                       variant="outlined"
                       multiline
                       rows="4"
-                      style={{ width: "260px" }}
                     />
                   </Grid>
                 </Grid>
@@ -154,7 +185,7 @@ export default function EventCreateForm() {
                 <Grid item xs={12}>
                   <Grid container justify="center" spacing={1}>
                     <FormControl
-                      style={{ margin: 1, minWidth: 260 }}
+                      style={{ margin: 1, minWidth: 400 }}
                       variant="outlined"
                       value={interest}
                     >
@@ -186,28 +217,11 @@ export default function EventCreateForm() {
                       variant="outlined"
                       multiline
                       rows="4"
-                      style={{ width: "260px" }}
+                      style={{ width: "400px" }}
                     />
                   </Grid>
                 </Grid>
-                <Grid item xs={12}>
-                  <Grid container justify="center" spacing={1}>
-                    <Field
-                      component={TextField}
-                      type="text"
-                      label="Website url"
-                      name="phone"
-                      variant="outlined"
-                      InputProps={{
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <WebIcon color="primary" />
-                          </InputAdornment>
-                        )
-                      }}
-                    />
-                  </Grid>
-                </Grid>
+
                 <Grid item xs={12}>
                   <Grid container justify="center" spacing={1}>
                     <Button
@@ -226,7 +240,11 @@ export default function EventCreateForm() {
                       color="primary"
                       disabled={isSubmitting}
                       onClick={submitForm}
-                      style={{ background: "#05386B", borderRadius: "200px" }}
+                      style={{
+                        background: "#05386B",
+                        borderRadius: "200px",
+                        width: "200px"
+                      }}
                     >
                       Submit
                     </Button>

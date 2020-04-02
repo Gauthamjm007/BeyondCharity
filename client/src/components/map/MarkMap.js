@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 import Geocode from "react-geocode";
-import { GOOGLE_KEY } from "./key";
+import { GOOGLE_KEY } from "../../key";
 Geocode.setApiKey(GOOGLE_KEY);
 Geocode.setLanguage("en");
 Geocode.setRegion("es");
@@ -57,6 +57,7 @@ class MarkMap extends Component {
       (response) => {
         const address = response.results[0].formatted_address;
         console.log(address);
+        this.props.sendData(lat, lng, address);
       },
       (error) => {
         console.error(error);
@@ -78,7 +79,7 @@ class MarkMap extends Component {
     const style = {
       borderRadius: "20px",
       width: "30%",
-      height: "70vh"
+      height: "40vh"
     };
     return (
       <Map
