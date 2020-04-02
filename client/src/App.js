@@ -1,13 +1,13 @@
 import React from "react";
-import Footer from "./components/footer/Footer";
-import BycLogo from "./components/icons/bycLogo";
 import MainAppBar from "./components/appbar/appbar";
+import UserMain from "./components/main/UserMain";
+import EventAll from "./components/event/EventAll";
 function App() {
   return (
     <div>
-      <BycLogo />
       <MainAppBar />
-      <Footer></Footer>
+      <UserMain />
+      <EventAll />
     </div>
   );
 }
