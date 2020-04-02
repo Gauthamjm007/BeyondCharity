@@ -1,8 +1,11 @@
 import React from "react";
-
-import "./Footer.css";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
+import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
-//import styled from "styled-components";
+
 const FacebookIcon = () => {
   return (
     <svg
@@ -96,35 +99,65 @@ const TwitterIcon = () => {
   );
 };
 
-export default function Footer() {
+function Copyright() {
   return (
-    <div className="main-footer">
-      <div className="footer">
-        <h6 className="follow">Follow Us</h6>
-        <div className="icon-grid">
-          {" "}
-          <Grid container spacing={1}>
-            <Grid item xs={1}>
-              <FacebookIcon />
-            </Grid>
-            <Grid item xs={1}>
-              <InstagramIcon />
-            </Grid>
-            <Grid item xs={1}>
-              <LinkedinIcon />
-            </Grid>
-            <Grid item xs={1}>
-              <TwitterIcon />
-            </Grid>
-          </Grid>
-        </div>
+    <Typography variant="body2" color="textSecondary">
+      {"Copyright © "}
+      <Link color="inherit" href="https://material-ui.com/">
+        Your Website
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
+}
 
-        <h6 className="copyright">
-          © Beyond charity {new Date().getFullYear()}
-          <br />
-          Terms of Service - Privacy Policy
-        </h6>
-      </div>
+const useStyles = makeStyles((theme) => ({
+  footer: {
+    marginTop: "auto",
+    backgroundColor: "#5CDB95"
+  }
+}));
+
+export default function StickyFooter() {
+  const classes = useStyles();
+
+  return (
+    <div>
+      <CssBaseline />
+
+      <footer className={classes.footer}>
+        <Grid container justify="flex-start">
+          <Container>
+            <h6 className="follow">Follow Us</h6>
+            <Grid
+              container
+              direction="row"
+              justify="flex-start"
+              alignItems="flex-start"
+            >
+              <Grid item xs={12} sm={3}>
+                <TwitterIcon />
+              </Grid>
+              <Grid item xs={12} sm={3}>
+                <LinkedinIcon />
+              </Grid>
+              <Grid item xs={12} sm={3}>
+                <InstagramIcon />
+              </Grid>
+              <Grid item xs={12} sm={3}>
+                <FacebookIcon />
+              </Grid>
+            </Grid>
+            <Copyright />
+          </Container>
+        </Grid>
+      </footer>
+      <h6 className="copyright">
+        © Beyond charity {new Date().getFullYear()}
+        <br />
+        Terms of Service - Privacy Policy
+      </h6>
     </div>
   );
 }

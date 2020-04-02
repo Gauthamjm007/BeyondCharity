@@ -13,6 +13,18 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import bycicon from "./bycicon.png";
 import MessageIcon from "@material-ui/icons/Message";
+import { createMuiTheme } from "@material-ui/core/styles";
+import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: "#05386B" },
+    secondary: { main: "#5CDB95" }
+  },
+  status: {
+    danger: "orange"
+  }
+});
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -133,15 +145,16 @@ export default function MainAppBar() {
     >
       <MenuItem>
         <IconButton>
-          <Badge badgeContent={7} style={{ color: "#379683" }} color="inherit">
-            <MessageIcon style={{ color: "#05386B" }} />
+          <Badge badgeContent={7} color="secondary">
+            <MessageIcon color="primary" />
           </Badge>
         </IconButton>
+        <p>Messages</p>
       </MenuItem>
       <MenuItem>
         <IconButton color="inherit">
-          <Badge badgeContent={11} style={{ color: "#379683" }} color="primary">
-            <NotificationsIcon />
+          <Badge badgeContent={11} color="secondary">
+            <NotificationsIcon color="primary" />
           </Badge>
         </IconButton>
         <p>Notifications</p>
@@ -153,7 +166,7 @@ export default function MainAppBar() {
           aria-haspopup="true"
           color="inherit"
         >
-          <AccountCircle />
+          <AccountCircle color="primary" />
         </IconButton>
         <p>Profile</p>
       </MenuItem>
@@ -162,77 +175,71 @@ export default function MainAppBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar
-        position="fixed"
-        style={{ background: "white", boxShadow: "none" }}
-      >
-        <Toolbar>
-          <img src={bycicon} style={{ width: "50px", height: "40px" }}></img>
-          <div
-            className={classes.search}
-            style={{ background: "#05386B", borderRadius: "10px" }}
-          >
-            <div className={classes.searchIcon}>
-              <SearchIcon style={{ color: "white" }} />
+      <MuiThemeProvider theme={theme}>
+        <AppBar
+          position="fixed"
+          style={{ background: "white", boxShadow: "none" }}
+        >
+          <Toolbar>
+            <img src={bycicon} style={{ width: "50px", height: "40px" }}></img>
+            <div
+              className={classes.search}
+              style={{ background: "#05386B", borderRadius: "10px" }}
+            >
+              <div className={classes.searchIcon}>
+                <SearchIcon style={{ color: "white" }} />
+              </div>
+              <InputBase
+                style={{ color: "white" }}
+                placeholder="Search"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput
+                }}
+                inputProps={{ "aria-label": "search" }}
+              />
             </div>
-            <InputBase
-              style={{ color: "white" }}
-              placeholder="Search"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput
-              }}
-              inputProps={{ "aria-label": "search" }}
-            />
-          </div>
-          <div className={classes.grow} />
-          <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 17 new notifications">
-              <Badge
-                badgeContent={7}
-                style={{ color: "#379683" }}
-                color="primary"
+            <div className={classes.grow} />
+            <div className={classes.sectionDesktop}>
+              <IconButton aria-label="show 17 new notifications">
+                <Badge badgeContent={7} color="secondary">
+                  <MessageIcon color="primary" />
+                </Badge>
+              </IconButton>
+            </div>
+            <div className={classes.sectionDesktop}>
+              <IconButton aria-label="show 17 new notifications">
+                <Badge badgeContent={17} color="secondary">
+                  <NotificationsIcon color="primary" />
+                </Badge>
+              </IconButton>
+              <IconButton
+                edge="end"
+                aria-label="account of current user"
+                aria-controls={menuId}
+                aria-haspopup="true"
+                onClick={handleProfileMenuOpen}
+                color="inherit"
               >
-                <MessageIcon style={{ color: "#05386B" }} />
-              </Badge>
-            </IconButton>
-          </div>
-          <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 17 new notifications">
-              <Badge
-                badgeContent={17}
-                style={{ color: "#379683" }}
-                color="primary"
+                <AccountCircle color="primary" />
+              </IconButton>
+            </div>
+            <div className={classes.sectionMobile}>
+              <IconButton
+                aria-label="show more"
+                aria-controls={mobileMenuId}
+                aria-haspopup="true"
+                onClick={handleMobileMenuOpen}
+                color="inherit"
               >
-                <NotificationsIcon style={{ color: "#05386B" }} />
-              </Badge>
-            </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle style={{ color: "#05386B" }} />
-            </IconButton>
-          </div>
-          <div className={classes.sectionMobile}>
-            <IconButton
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon style={{ color: "#05386B" }} />
-            </IconButton>
-          </div>
-        </Toolbar>
-      </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
+                <MoreIcon color="primary" />
+              </IconButton>
+            </div>
+          </Toolbar>
+        </AppBar>
+        {renderMobileMenu}
+        {renderMenu}
+      </MuiThemeProvider>
     </div>
   );
 }

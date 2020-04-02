@@ -1,12 +1,12 @@
 import React from "react";
 import Footer from "./components/footer/Footer";
 import BycLogo from "./components/icons/bycLogo";
-import UserDetailsForm from "./components/user/userDetailsForm";
+import MainAppBar from "./components/appbar/appbar";
 function App() {
   return (
     <div>
       <BycLogo />
-      <UserDetailsForm />
+      <MainAppBar />
       <Footer></Footer>
     </div>
   );

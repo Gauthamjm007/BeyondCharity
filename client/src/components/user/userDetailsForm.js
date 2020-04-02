@@ -167,7 +167,6 @@ export default function UserDetailsForm() {
                     />
                   </Grid>
                 </Grid>
-
                 <Grid item xs={12}>
                   <Grid container justify="center" spacing={1}>
                     <Button
@@ -175,7 +174,12 @@ export default function UserDetailsForm() {
                       color="primary"
                       disabled={isSubmitting}
                       onClick={submitForm}
-                      style={{ background: "#05386B", borderRadius: "200px" }}
+                      style={{
+                        background: "#05386B",
+                        borderRadius: "200px",
+                        width: "300px",
+                        height: "40px"
+                      }}
                     >
                       Submit
                     </Button>
