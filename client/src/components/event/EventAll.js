@@ -2,7 +2,6 @@ import React from "react";
 import Card from "@material-ui/core/Card";
 //import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import Divider from "@material-ui/core/Divider";
 import styled from "styled-components";
 import Grid from "@material-ui/core/Grid";
 

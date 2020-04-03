@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import PetsIcon from "@material-ui/icons/Pets";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 const EventBox = styled.div`
@@ -11,36 +10,6 @@ const EventBox = styled.div`
   width: 100%;
   position: fixed;
   top: 80px;
-`;
-const OrgBox = styled.div`
-  background: #ffffff;
-  width: 210px;
-  height: ${(props) => props.height}px;
-  position: fixed;
-  right: ${(props) => props.right}px;
-  top: ${(props) => props.top}px;
-  box-shadow: 0px 9px 18px rgba(0, 0, 0, 0.18), 0px 6px 5px rgba(0, 0, 0, 0.24);
-  border-radius: 20px;
-`;
-const RoundButton = styled.div`
-  height: 60px;
-  width: 60px;
-  background: #05386b;
-  display: flex;
-  justify-content: center;
-  position: absoulte;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  align-items: center;
-  color: white;
-  margin-top: 20px;
-  margin-left: 13px;
-  text-decorator: none;
-  border-radius: 50%;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 1px 18px rgba(0, 0, 0, 0.12),
-    0px 6px 10px rgba(0, 0, 0, 0.14);
 `;
 
 const EventSubtext = styled.div`

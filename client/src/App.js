@@ -1,10 +1,10 @@
 import React from "react";
-import EventDetail from "./components/event/EventDetails";
-import UserDetails from "./components/main/UserDetails";
+import EventRemove from "./components/event/EventRemove";
+
 function App() {
   return (
     <div>
-      <UserDetails />
+      <EventRemove />
     </div>
   );
 }
