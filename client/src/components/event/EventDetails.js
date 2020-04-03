@@ -151,8 +151,16 @@ export default function EventDetails() {
             <h3>
               We are joining together to rescue some stray dogs and puppies
               ,treat them for any illness and find a foster home for them
+              <br />
+              <br />
+              Address: <br />
+              <h6>
+                We are joining together to rescue some stray dogs and puppies
+                ,treat them for any illness and find a foster home for them
+              </h6>
             </h3>
           </Grid>
+
           <Grid item xs={12}>
             <Button variant="contained" color="primary">
               Voulenteer
