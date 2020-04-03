@@ -1,13 +1,9 @@
 import React from "react";
-import MainAppBar from "./components/appbar/appbar";
-import UserMain from "./components/main/UserMain";
-import EventAll from "./components/event/EventAll";
+import Dashboard from "./components/dashboard/Dashboard";
 function App() {
   return (
     <div>
-      <MainAppBar />
-      <UserMain />
-      <EventAll />
+      <Dashboard />
     </div>
   );
 }

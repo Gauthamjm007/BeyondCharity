@@ -54,9 +54,13 @@ export default function EventAll() {
       <br />
       <br />
       <br />
-      <br />
-      <br />
+
       <Grid container spacing={3} justify="center">
+        <Grid container item xs={12}>
+          <Grid container direction="row" justify="center">
+            <DetailsText>22nd March 2020</DetailsText>
+          </Grid>
+        </Grid>
         <Card variant="outlined" style={{ width: 700, borderRadius: "20px" }}>
           <CardContent>
             <Grid container item xs={12}>
