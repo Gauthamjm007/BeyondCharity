@@ -1,9 +1,9 @@
 import React from "react";
-import Dashboard from "./components/dashboard/Dashboard";
+import EventDetail from "./components/event/EventDetails";
 function App() {
   return (
     <div>
-      <Dashboard />
+      <EventDetail />
     </div>
   );
 }
