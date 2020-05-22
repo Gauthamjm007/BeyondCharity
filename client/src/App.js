@@ -1,10 +1,10 @@
 import React from "react";
-import EventRemove from "./components/event/EventRemove";
+import Dashboard from "./components/dashboard/Dashboard";
 
 function App() {
   return (
     <div>
-      <EventRemove />
+      <Dashboard />
     </div>
   );
 }
