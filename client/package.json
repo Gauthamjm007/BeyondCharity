@@ -22,7 +22,7 @@
     "i": "^0.3.6",
     "loadash": "^1.0.0",
     "mdbreact": "^4.25.5",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "pdf-viewer-reactjs": "^2.0.3",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
